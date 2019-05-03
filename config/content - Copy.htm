@@ -68,18 +68,7 @@
 <p><a href="https://github.com/BlackrockDigital">https://github.com/BlackrockDigital</a></p>
 <p><a href="https://themewagon.com/theme_tag/bootstrap-4-templates/">https://themewagon.com/theme_tag/bootstrap-4-templates/</a></p>
 <p><a href="https://github.com/kamranahmedse/developer-roadmap">https://github.com/kamranahmedse/developer-roadmap</a> (<a href="https://medium.com/tech-tajawal/modern-frontend-developer-in-2018-4c2072fa2b9c">blog</a>)</p>
-<p><br/>學習如何使用 CMSimfly, 在網站中加入各種內容 (導入 Bootstrap frontend framework)<br/><br/>使用 Flask, bs4 與 lxml 模組<br/><br/>了解 CMSimfly 如何建構, 並且嘗試修改現有功能, 除錯或建立自己的網際內容管理系統<br/><br/></p><h3>CMSimfly 架構</h3>
-<p>CMSimfly 以 Python 3 編寫, 利用 Flask 網路框架可以在伺服器運行, 讓使用者利用瀏覽器擷取動態 WWW 伺服器所送至近端的 html 加上 Javascript 程式碼, 然後在瀏覽器中顯示網際內容編輯器 (採用 tinymce4).</p>
-<p>在使用者能夠透過 tinymce4 編輯各 CMSimfly 動態網際頁面之前, CMSimfly 利用 Beautiflysoup 4 對 config/content.htm 進行分頁, 然後將 H1 標註中的文字當作第一階的頁面, H2 與 H3 標註內容則當作第二階與第三階的頁面標題, 而標題與標題之間的 html 與 Javascript 則分別當作各階次頁面的內容.</p>
-<p>因此 CMSimfly 可以在任何支援 Python 3 、Flask 與 Beautifulsoup 4 的環境中啟動 WWW 伺服器 (即在近端以 python wsgi.py 執行, 或在遠端以 uwsgi 與 nginx 執行 wsgi.py 中的 application), 接著使用者就可以根據伺服器啟動時所使用電腦的 IP 與埠號進行連線.</p>
-<p>使用者連線後, Beautifulsoup 即對 config/content.htm 分頁, 然後根據頁面配置讓使用者在瀏覽器中使用 login 登入, 或者以動態的方式檢視各階次的分頁.</p>
-<p>當使用者透過 login 登入 CMSimfly 成功後, 便可以指定頁面進行編輯, 修改後內容將存入 config/content.htm, 而尚未改版前的 content.htm 則改名為 content_backup.htm, 此一功能是防止 CMSimfly 因頁面解讀錯誤時, 誤刪資料時, 使用者可以從 content_backup.htm 取回上一版的資料內容.</p>
-<h4>動態轉靜態內容</h4>
-<p>由於動態 CMSimfly 只能在 Python3 環境中運行, 而某些免費的雲端服務所提供的 WWW 伺服器僅提供 html 加上 Javascript 伺服, 因此為了讓 CMSimfly 動態系統的內容, 能夠將內容送到這些只提供 WWW 伺服器的系統中執行, CMSimfly 加入 generate_pages 的功能, 也就是根據 config/content.htm 中各頁面的標題與資料, 以 Beautifulsoup4 再結合 lxml 模組, 將 content.htm 疊上各頁面所選定的 css 與其他配置頁面格式的 Javascript, 轉成位於 content 目錄中的靜態網站內容, 此一包含 index.html 的各頁面 html 檔案, 可以在任何只支援 html 伺服器的環境中運行, 例如: Github Pages 或 Fossil SCM 中的 doc 伺服頁面功能.</p>
-<p>截至目前的說明, 希望啟動 CMSimfly 動態運行, 需要 <span>Python 3 、Flask 與 Beautifulsoup 4 , 若要將動態內容轉為靜態內容, 則額外需要 lxml 模組.</span></p>
-<p><span>Python 3 在隨身系統的模組安裝指令為:</span></p>
-<p style="padding-left: 30px;"><span>pip install flask bs4 lxml</span></p>
-<p><span>表示要利用 pip 安裝 flask, bs4 與 lxml 模組.</span></p><h3>套用模板一</h3>
+<p><br/>學習如何使用 CMSimfly, 在網站中加入各種內容 (導入 Bootstrap frontend framework)<br/><br/>使用 Flask, bs4 與 lxml 模組<br/><br/>了解 CMSimfly 如何建構, 並且嘗試修改現有功能, 除錯或建立自己的網際內容管理系統<br/><br/></p><h3>套用模板一</h3>
 <p><a href="https://themewagon.com/themes/free-html5-bootstrap-4-business-website-template-chimper/">https://themewagon.com/themes/free-html5-bootstrap-4-business-website-template-chimper/</a></p>
 <p>採用程式庫:</p>
 <p style="padding-left: 30px;"><a href="https://github.com/mattboldt/typed.js">https://github.com/mattboldt/typed.js</a> </p>
@@ -97,7 +86,8 @@
 <p>動態 CMSimfly 仍維持原樣, 但是靜態網頁可以自由選擇頁面模板</p>
 <h4>Github Pages:</h4>
 <p><a href="http://cpgx.kmol.info/chimper/">http://cpgx.kmol.info/chimper/</a></p>
-<p></p><h2>Virtual Host</h2>
+<p></p>
+<h2>Virtual Host</h2>
 <p>以下內容主要目的在培養能夠建立 backend 網際可程式化機械設計合成系統的開發人員, 網際前端與後端的開發流程, 可以參考:</p>
 <p><a href="https://github.com/kamranahmedse/developer-roadmap">https://github.com/kamranahmedse/developer-roadmap</a><span> (</span><a href="https://medium.com/tech-tajawal/modern-frontend-developer-in-2018-4c2072fa2b9c">blog</a><span>)</span></p>
 <p><span>前端開發者必須讓網頁能在各種大小與規格的瀏覽裝置中, 正確且友善地顯示內容, 而後端開發者, 則專注於讓近端使用者能夠透過網際介面使用各種與機械設計流程相關的 CAD, CAE, CAM, PDM, 以及各種支援用的數位型錄等.</span></p>
