@@ -147,14 +147,24 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">程式開發要件 << <a href='程式開發要件.html'>Previous</a> <a href='CMSimfly 架構.html'>Next</a> >> CMSimfly 架構<br /><h1>Mobile 網站內容</h1>
-<p>參考倉儲: <a href="https://github.com/mdecourse/acmsimfly">https://github.com/mdecourse/acmsimfly</a></p>
-<p>參考網站:</p>
-<p><a href="http://mde.tw/acmsimfly">http://mde.tw/acmsimfly</a></p>
-<p><a href="https://github.com/BlackrockDigital">https://github.com/BlackrockDigital</a></p>
-<p><a href="https://themewagon.com/theme_tag/bootstrap-4-templates/">https://themewagon.com/theme_tag/bootstrap-4-templates/</a></p>
-<p><a href="https://github.com/kamranahmedse/developer-roadmap">https://github.com/kamranahmedse/developer-roadmap</a> (<a href="https://medium.com/tech-tajawal/modern-frontend-developer-in-2018-4c2072fa2b9c">blog</a>)</p>
-<p><br/>學習如何使用 CMSimfly, 在網站中加入各種內容 (導入 Bootstrap frontend framework)<br/><br/>使用 Flask, bs4 與 lxml 模組<br/><br/>了解 CMSimfly 如何建構, 並且嘗試修改現有功能, 除錯或建立自己的網際內容管理系統<br/><br/></p><br />程式開發要件 << <a href='程式開發要件.html'>Previous</a> <a href='CMSimfly 架構.html'>Next</a> >> CMSimfly 架構</div>
+    <div id="tipue_search_content">CMSimfly 架構 << <a href='CMSimfly 架構.html'>Previous</a> <a href='套用模板一.html'>Next</a> >> 套用模板一<br /><h1>bs4 應用</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import bs4
+
+filename = "index.html"
+with open(filename, "r", encoding="utf-8") as f:
+    file_content = f.read()
+
+soup = bs4.BeautifulSoup(file_content, "lxml")
+
+new_content = soup.prettify()
+print(new_content)
+
+with open(filename, "w", encoding="utf-8") as f:
+    f.write(new_content)
+
+#print(soup.prettify())
+</pre>
+<br />CMSimfly 架構 << <a href='CMSimfly 架構.html'>Previous</a> <a href='套用模板一.html'>Next</a> >> 套用模板一</div>
         
     <!-- footer -->
       <div class="container">

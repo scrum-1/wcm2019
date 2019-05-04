@@ -1,6 +1,6 @@
 <!DOCTYPE html><html>
         <head>
-        <title>CMSimfly</title>
+        <title>2019 Spring WCM 期末示範網站</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
@@ -136,7 +136,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='各組期末報告說明.html'>各組期末報告說明</a><li class='has-children'><a href='近端配置與管理.html'>近端配置與管理</a><ul class='dropdown'><li><a href='網路連線設定.html'>網路連線設定</a><li><a href='配置可攜程式環境.html'>配置可攜程式環境</a></li></ul><li><a href='倉儲改版.html'>倉儲改版</a><li class='has-children'><a href='系統開發.html'>系統開發</a><ul class='dropdown'><li class='has-children'><a href='Mobile 網站內容.html'>Mobile 網站內容</a><ul class='dropdown'><li><a href='CMSimfly 架構.html'>CMSimfly 架構</a><li><a href='套用模板一.html'>套用模板一</a></li></ul><li><a href='Virtual Host.html'>Virtual Host</a></li></ul><li><a href='期中報告.html'>期中報告</a></li>
+                     <li><a href='各組期末報告說明.html'>各組期末報告說明</a><li class='has-children'><a href='近端配置與管理.html'>近端配置與管理</a><ul class='dropdown'><li><a href='網路連線設定.html'>網路連線設定</a><li><a href='配置可攜程式環境.html'>配置可攜程式環境</a></li></ul><li><a href='倉儲改版.html'>倉儲改版</a><li class='has-children'><a href='系統開發.html'>系統開發</a><ul class='dropdown'><li><a href='程式開發要件.html'>程式開發要件</a><li class='has-children'><a href='Mobile 網站內容.html'>Mobile 網站內容</a><ul class='dropdown'><li><a href='CMSimfly 架構.html'>CMSimfly 架構</a><li><a href='bs4 應用.html'>bs4 應用</a><li><a href='套用模板一.html'>套用模板一</a></li></ul><li><a href='Virtual Host.html'>Virtual Host</a></li></ul><li><a href='期中報告.html'>期中報告</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,7 +147,7 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">Mobile 網站內容 << <a href='Mobile 網站內容.html'>Previous</a> <a href='套用模板一.html'>Next</a> >> 套用模板一<br /><h1>CMSimfly 架構</h1>
+    <div id="tipue_search_content">Mobile 網站內容 << <a href='Mobile 網站內容.html'>Previous</a> <a href='bs4 應用.html'>Next</a> >> bs4 應用<br /><h1>CMSimfly 架構</h1>
 <p>CMSimfly 以 Python 3 編寫, 利用 Flask 網路框架可以在伺服器運行, 讓使用者利用瀏覽器擷取動態 WWW 伺服器所送至近端的 html 加上 Javascript 程式碼, 然後在瀏覽器中顯示網際內容編輯器 (採用 tinymce4).</p>
 <p>在使用者能夠透過 tinymce4 編輯各 CMSimfly 動態網際頁面之前, CMSimfly 利用 Beautiflysoup 4 對 config/content.htm 進行分頁, 然後將 H1 標註中的文字當作第一階的頁面, H2 與 H3 標註內容則當作第二階與第三階的頁面標題, 而標題與標題之間的 html 與 Javascript 則分別當作各階次頁面的內容.</p>
 <p>因此 CMSimfly 可以在任何支援 Python 3 、Flask 與 Beautifulsoup 4 的環境中啟動 WWW 伺服器 (即在近端以 python wsgi.py 執行, 或在遠端以 uwsgi 與 nginx 執行 wsgi.py 中的 application), 接著使用者就可以根據伺服器啟動時所使用電腦的 IP 與埠號進行連線.</p>
@@ -159,7 +159,7 @@ init_mathjax();
 <p><span>Python 3 在隨身系統的模組安裝指令為:</span></p>
 <p style="padding-left: 30px;"><span>pip install flask bs4 lxml</span></p>
 <p><span>表示要利用 pip 安裝 flask, bs4 與 lxml 模組.</span></p>
-<p><span></span></p><br />Mobile 網站內容 << <a href='Mobile 網站內容.html'>Previous</a> <a href='套用模板一.html'>Next</a> >> 套用模板一</div>
+<p><span></span></p><br />Mobile 網站內容 << <a href='Mobile 網站內容.html'>Previous</a> <a href='bs4 應用.html'>Next</a> >> bs4 應用</div>
         
     <!-- footer -->
       <div class="container">

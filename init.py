@@ -8,7 +8,7 @@ static_dir = _curdir + "/static"
 class Init(object):
     # uwsgi as static class variable, can be accessed by Init.uwsgi
     uwsgi = False
-    site_title = "CMSimfly"
+    site_title = "2019 Spring WCM 期末示範網站"
     def __init__(self):
         # hope to create downloads and images directories　
         if not os.path.isdir(_curdir + "/downloads"):
