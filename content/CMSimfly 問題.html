@@ -136,7 +136,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='各組期末報告說明.html'>各組期末報告說明</a><li class='has-children'><a href='近端配置與管理.html'>近端配置與管理</a><ul class='dropdown'><li><a href='網路連線設定.html'>網路連線設定</a><li><a href='配置可攜程式環境.html'>配置可攜程式環境</a></li></ul><li><a href='倉儲改版.html'>倉儲改版</a><li class='has-children'><a href='系統開發.html'>系統開發</a><ul class='dropdown'><li><a href='程式開發要件.html'>程式開發要件</a><li class='has-children'><a href='Mobile 網站內容.html'>Mobile 網站內容</a><ul class='dropdown'><li><a href='CMSimfly 架構.html'>CMSimfly 架構</a><li><a href='bs4 應用.html'>bs4 應用</a><li><a href='套用模板一.html'>套用模板一</a></li></ul><li><a href='Virtual Host.html'>Virtual Host</a></li></ul><li><a href='期末報告.html'>期末報告</a><li><a href='期中報告.html'>期中報告</a></li>
+                     <li><a href='各組期末報告說明.html'>各組期末報告說明</a><li class='has-children'><a href='近端配置與管理.html'>近端配置與管理</a><ul class='dropdown'><li><a href='網路連線設定.html'>網路連線設定</a><li><a href='配置可攜程式環境.html'>配置可攜程式環境</a></li></ul><li><a href='倉儲改版.html'>倉儲改版</a><li class='has-children'><a href='系統開發.html'>系統開發</a><ul class='dropdown'><li><a href='程式開發要件.html'>程式開發要件</a><li class='has-children'><a href='Mobile 網站內容.html'>Mobile 網站內容</a><ul class='dropdown'><li><a href='CMSimfly 架構.html'>CMSimfly 架構</a><li><a href='bs4 應用.html'>bs4 應用</a><li><a href='套用模板一.html'>套用模板一</a></li></ul><li><a href='Virtual Host.html'>Virtual Host</a><li><a href='CMSimfly 問題.html'>CMSimfly 問題</a></li></ul><li><a href='期末報告.html'>期末報告</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,8 +147,24 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">期末報告 << <a href='期末報告.html'>Previous</a> <br /><h1>期中報告</h1>
-<p>這裡將存放各學員或分組的期中報告相關內容</p><br />期末報告 << <a href='期末報告.html'>Previous</a> </div>
+    <div id="tipue_search_content">Virtual Host << <a href='Virtual Host.html'>Previous</a> <a href='期末報告.html'>Next</a> >> 期末報告<br /><h1>CMSimfly 問題</h1>
+<p>CMSimfly 使用相關問題, 請提供在此, 目前已知問題:</p>
+<p>當刪除最後一頁全部內容後, ssavePage 函式存檔後將會出現錯誤畫面, 重新回到系統後即恢復正常.</p>
+<p>錯誤訊息為:</p>
+<p style="padding-left: 30px;">File "Y:\tmp\scrum1\wcm2019\flaskapp.py", line 2220, in ssavePage<br/>if original_head_title == head[int(page_order)]:<br/>IndexError: list index out of range</p>
+<p>處理方式如下:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">    # 嘗試避免因最後一個標題刪除儲存後產生 internal error 問題
+    if original_head_title is None:
+        return redirect("/")
+    try:
+        if original_head_title == head[int(page_order)]:
+            edit_url = "/get_page/" + original_head_title + "/1"
+            return redirect(edit_url)
+        else:
+            return redirect("/")
+    except:
+        return redirect("/")</pre>
+<p></p><br />Virtual Host << <a href='Virtual Host.html'>Previous</a> <a href='期末報告.html'>Next</a> >> 期末報告</div>
         
     <!-- footer -->
       <div class="container">
